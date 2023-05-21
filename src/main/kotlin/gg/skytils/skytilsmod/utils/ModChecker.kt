@@ -74,27 +74,6 @@ object ModChecker {
             }
 
             val totalOptions = arrayOf(discordLink, close)
-            JOptionPane.showOptionDialog(
-                frame,
-                """
-                    #You're using a 'custom' version of Minecraft Forge! (${ClientBrandRetriever.getClientModName()})
-                    #This is currently unsupported due to guaranteed incompatibilities.
-                    #For any issues you encounter with Skytils, please contact
-                    #your 'custom' mod loader's developer first for instructions.
-                    #You will not receive support from Skytils staff for issues.
-                    #Thanks! 💕
-                    #
-                    #Was I wrong? Report this at discord.gg/skytils.
-                """.trimMargin("#"),
-                "Skytils Message",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.WARNING_MESSAGE,
-                icon,
-                totalOptions,
-                totalOptions[1]
-            )
-            frame.isVisible = false
-            frame.dispose()
         }
     }
 }
